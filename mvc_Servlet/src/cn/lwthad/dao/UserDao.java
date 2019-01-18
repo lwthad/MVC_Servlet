@@ -22,7 +22,7 @@ public class UserDao {
         QueryRunner queryRunner = new QueryRunner(c3p0DataSource);
         String sql = "select * from user where username= ? and passwd= ?";
 
-        List<User> userList = queryRunner.query(sql, new MyRSHandler(), new Object[]{"Zhangsan", "123123"});
+        List<User> userList = queryRunner.query(sql, new MyRSHandler(), new Object[]{user.getUsername(), user.getPasswd()});
         if(userList.size()!=0){
             System.out.println("用户： "+ userList.get(0));
             return 1;
