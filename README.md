@@ -3,11 +3,10 @@
 经典mvc框架模式Demo
 =
 技术：servlet+jsp+javaBean+ mysql
-====
+---
 
 ***
-
-`实现:`
+**`实 现:`**
 
 * 用户登陆功能 
 
