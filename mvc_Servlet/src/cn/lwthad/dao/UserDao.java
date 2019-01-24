@@ -24,7 +24,7 @@ public class UserDao {
 
         List<User> userList = queryRunner.query(sql, new MyRSHandler(), new Object[]{user.getUsername(), user.getPasswd()});
         if(userList.size()!=0){
-            System.out.println("用户： "+ userList.get(0));
+            System.out.println("UserDao用户： "+ userList.get(0));
             return 1;
         }
         return 0;

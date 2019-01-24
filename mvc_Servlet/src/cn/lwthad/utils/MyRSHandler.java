@@ -11,6 +11,7 @@ import java.util.List;
 public class MyRSHandler implements ResultSetHandler<List<User>> {
     /**
      * 重写查询返回 集封装结果集策略对象
+     *
      * @param resultSet
      * @return
      * @throws SQLException
@@ -18,7 +19,7 @@ public class MyRSHandler implements ResultSetHandler<List<User>> {
     @Override
     public List<User> handle(ResultSet resultSet) throws SQLException {
         List<User> list = new ArrayList<User>();
-        while(resultSet.next()){
+        while (resultSet.next()) {
             User user = new User();
             user.setUsername(resultSet.getString("username"));
             user.setPasswd(resultSet.getString("passwd"));

@@ -16,7 +16,7 @@ public class VerifyCodeServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         VerifyCode code = new VerifyCode();
         BufferedImage image = code.createImage();
-        req.getSession().setAttribute("session_vcode",code.getText());
+        req.getSession().setAttribute("session_vcode", code.getText());
 
         VerifyCode.output(image, resp.getOutputStream());
     }
